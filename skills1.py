@@ -31,11 +31,14 @@ def all_even(number_list):
 
 # Write a function that takes a list of strings and returns a new list with all strings of length 4 or greater.
 def long_words(word_list):
-    new_list = []
-    for word in word_list:
-        if len(word) >= 4:
-            new_list.append(word)
-    return new_list
+    # new_list = []
+    # for word in word_list:
+    #     if len(word) >= 4:
+    #         new_list.append(word)
+    # return new_list
+    return [word for word in word_list if len(word) >= 4]
+
+
 
 # Write a function that finds the smallest element in a list of integers and returns it.
 def smallest(number_list):
@@ -45,6 +48,7 @@ def smallest(number_list):
             min_num = num
 
     return min_num
+
 
 
 # Write a function that finds the largest element in a list of integers and returns it.
@@ -58,18 +62,27 @@ def largest(number_list):
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
 def halvesies(number_list):
-    new_list = []
-    for num in number_list:
-        new_list.append(float(num)/2)
+    # new_list = []
+    # for num in number_list:
+    #     new_list.append(float(num)/2)
+    # return new_list
+
+    new_list = [float(num)/2 for num in number_list]
     return new_list
+
+# print halvesies(number_list)
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
-    new_list = []
-    for word in word_list:
-        new_list.append(len(word))
+    # new_list = []
+    # for word in word_list:
+    #     new_list.append(len(word))
 
-    return new_list
+    # return new_list
+
+    return [len(word) for word in word_list]
+
+print word_lengths(word_list)
 
 # Write a function (using iteration) that sums all the numbers in a list.
 def sum_numbers(number_list):
